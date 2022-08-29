@@ -1,0 +1,90 @@
+@use "../utils/variables";
+#login {
+   color: variables.$white;
+   display: flex;
+   justify-self: center;
+   justify-content: space-between;
+   align-items: center;
+   align-self: center;
+   width: 100%;
+
+   .text {
+      .title {
+         font-size: 7rem;
+         font-weight: 700;
+      }
+      .subtitle {
+         font-size: 3rem;
+         font-family: "Josefin Sans", sans-serif;
+      }
+   }
+   .login-container {
+      background-color: variables.$white;
+      min-width: 30%;
+      height: 100%;
+      text-align: center;
+      color: variables.$dark-blue;
+      padding: 1rem;
+      border: 4px solid variables.$light-blue;
+      border-radius: 5px;
+      .error-msg {
+         color: variables.$error;
+      }
+      .error {
+         outline: 1px dashed variables.$error;
+      }
+      .error:focus {
+         outline: 2px dashed variables.$error;
+      }
+      .btn-login {
+         background-color: variables.$dark-blue;
+         color: variables.$white;
+         font-weight: 700;
+         font-family: "Josefin Sans", sans-serif;
+         outline: none;
+         border: none;
+         cursor: pointer;
+      }
+      .btn-register {
+         cursor: pointer;
+
+         background-color: variables.$yellow;
+         border: none;
+         padding: 1rem;
+         color: variables.$dark-blue;
+         font-family: "Josefin Sans", sans-serif;
+         width: 50%;
+         font-weight: 700;
+      }
+      input {
+         width: 99%;
+         margin: 0.5rem 0;
+         outline: 1px dashed variables.$light-blue;
+         border: none;
+         color: variables.$dark-blue;
+         padding: 1rem;
+         z-index: 1000;
+         font-size: 1rem;
+      }
+      input:focus {
+         outline: 2px dashed variables.$light-blue;
+      }
+   }
+}
+@media (max-width: 1024px) {
+   #login {
+      flex-direction: column;
+      .text {
+         text-align: center;
+         .title {
+            font-size: 3rem;
+         }
+         .subtitle {
+            font-size: 1.5rem;
+         }
+      }
+      .login-container {
+         margin-top: 2rem;
+      }
+   }
+}

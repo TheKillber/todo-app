@@ -1,0 +1,12 @@
+@use "../utils/variables";
+.loader-container {
+   position: absolute;
+   width: 100vw;
+   top: 0;
+   right: 0;
+   height: calc(100vh);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: variables.$dark-blue;
+}

@@ -1,0 +1,11 @@
+@use "./utils/resets";
+@use "./utils/font";
+@use "./utils/sizing";
+
+@use "./components/header";
+@use "./components/footer";
+@use "./components/loader";
+
+@use "./routes/login";
+@use "./routes/notes";
+@use "./routes/register";

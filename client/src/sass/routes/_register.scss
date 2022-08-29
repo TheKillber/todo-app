@@ -1,0 +1,42 @@
+@use "../utils/variables";
+.register-container {
+   height: calc(100vh - 6rem);
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   .form-container {
+      width: 70%;
+      padding: 1rem;
+      background-color: variables.$white;
+      border-radius: 5px;
+   }
+   form {
+      display: flex;
+      flex-direction: column;
+      input {
+         border: 2px dashed variables.$light-blue;
+         outline: none;
+         margin: 0.5rem 0;
+         padding: 1rem;
+         font-size: 1.5rem;
+         color: variables.$dark-blue;
+         border-radius: 5px;
+      }
+      .btn-register {
+         background-color: variables.$yellow;
+         border: none;
+         font-family: "Josefin Sans", sans-serif;
+         cursor: pointer;
+      }
+      .error {
+         border: 2px dashed variables.$error;
+         color: variables.$error;
+      }
+      .error-msg {
+         color: variables.$error;
+         width: 100%;
+         text-align: center;
+      }
+   }
+}

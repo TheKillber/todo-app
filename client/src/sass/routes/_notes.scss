@@ -1,0 +1,89 @@
+@use "../utils/variables";
+
+.notes-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   // justify-content: center;
+   width: 100%;
+   margin-top: 2rem;
+   .new-post {
+      width: 70%;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      border: 2px solid variables.$white;
+      input {
+         padding: 1.5rem;
+         font-size: 1.2rem;
+         border: none;
+         outline: none;
+         width: 80%;
+         font-family: "Josefin Sans", sans-serif;
+         color: variables.$dark-blue;
+      }
+      .button {
+         width: 20%;
+         background-color: variables.$light-blue;
+         color: variables.$white;
+         font-weight: 700;
+         cursor: pointer;
+      }
+   }
+   .delete-all {
+      color: variables.$white;
+      width: 70%;
+      margin-bottom: 0.3rem;
+      cursor: pointer;
+      font-family: "Josefin Sans", sans-serif;
+   }
+   #notes {
+      width: 70%;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column-reverse;
+   }
+   .note {
+      display: flex;
+      justify-content: space-between;
+      background-color: variables.$white;
+      color: variables.$dark-blue;
+      padding: 1rem 2rem;
+      width: 100%;
+      word-wrap: break-word;
+      border: 1px dashed variables.$light-blue;
+      position: relative;
+      .x {
+         cursor: pointer;
+         transition: transform 1s ease;
+         right: 1rem;
+         span {
+            width: 1rem;
+            height: 0.1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+
+            background-color: variables.$dark-blue;
+         }
+         span:nth-child(1) {
+            transform: rotate(45deg);
+         }
+         span:nth-child(2) {
+            transform: rotate(-45deg);
+         }
+      }
+   }
+}
+@media (max-width: 1024px) {
+   .notes-container {
+      .delete-all {
+         width: 100%;
+      }
+      #notes {
+         width: 100%;
+      }
+      .new-post {
+         width: 100%;
+      }
+   }
+}

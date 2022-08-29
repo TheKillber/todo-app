@@ -1,0 +1,17 @@
+@use "../utils/variables";
+.header {
+   padding: 1rem 4rem;
+   background-color: variables.$dark-blue;
+   color: variables.$white;
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   span {
+      font-family: "Josefin Sans", sans-serif;
+   }
+   .link-header {
+      color: variables.$white;
+      font-weight: 700;
+      font-family: "Josefin Sans", sans-serif;
+   }
+}
